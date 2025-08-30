@@ -1,7 +1,7 @@
 // main.jsx
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { HashRouter } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import { AuthProvider } from "./auth/AuthContext";
 import { ProtectedRoute } from "./auth/ProtectedRoute";
 import App from "./App.jsx";
@@ -12,7 +12,7 @@ import { AdminPage } from "./components/AdminPage.jsx";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <AuthProvider>           
-      <HashRouter>
+      <BrowserRouter basename="/carteleraDesarrollo">
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="/movie/:id" element={<MovieDetailPage />} />
@@ -26,7 +26,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             }
           />
         </Routes>
-      </HashRouter>
+      </BrowserRouter >
     </AuthProvider>
   </React.StrictMode>
 );
