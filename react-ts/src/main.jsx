@@ -12,7 +12,7 @@ import { AdminPage } from "./components/AdminPage.jsx";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <AuthProvider>           
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="/movie/:id" element={<MovieDetailPage />} />
@@ -26,7 +26,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             }
           />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </AuthProvider>
   </React.StrictMode>
 );
